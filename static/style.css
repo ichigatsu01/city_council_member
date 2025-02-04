@@ -2,6 +2,7 @@
 body {
     font-size: 18px;
     font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
+    color: #000;
 }
 h2 {
     font-size: 2rem;
@@ -18,9 +19,10 @@ h2 {
     display: flex;
     justify-content: space-between;
     max-width: 1500px;
-    width: 80vw;
+    width: auto;
     margin: 20px auto;
     padding: 0 2rem;
+    align-items: center;
 }
 .logo {
     font-size: 3rem;
@@ -33,6 +35,16 @@ h2 {
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+}
+.navi li a {
+    /* リンク貼り付け時の下線や文字色変更を防ぐ */
+    text-decoration-line: none;
+    color: inherit
+}
+.navi li a:visited {
+    /* リンク訪問後の文字色変更を防ぐ */
+    text-decoration-line: none;
+    color: inherit;
 }
 /* ハンバーガーメニュー ：非スマホ時は非表示 */
 #hamburger-btn-open, #hamburger-btn-close, #hamburger-menu{
@@ -66,6 +78,8 @@ h2 {
 }
 .column1-content-name {
     text-align: right;
+    font-size: 30px;
+    margin: 20px;
 }
 .column2 {
     flex: 3;
@@ -106,6 +120,17 @@ h2 {
         padding: 10px;
         list-style: none;
     }
+    #hamburger-menu-text li a {
+        /* リンク貼り付け時の下線や文字色変更を防ぐ */
+        text-decoration-line: none;
+        color: #eee
+    }
+    #hamburger-menu-text li a:visited {
+        /* リンク訪問後の文字色変更を防ぐ */
+        text-decoration-line: none;
+        color: #eee
+    }
+
     #hamburger-btn-open, #hamburger-btn-close {
         display: block;
         position: relative;
@@ -122,5 +147,32 @@ h2 {
         max-width: 800px;
         width: 100vw;
         text-align: center;
+    }
+    /* メッセージ、sns */
+    .two-columns {
+        display: block;
+        justify-content: center;
+        width: 80vw;
+        height: auto;
+        margin: 20px auto;
+        padding: 10px 0;
+        background-color: aliceblue;
+    }
+    .column1 {
+        margin: 20px;
+    }
+    .column1 h2 {
+        text-align: left;
+        margin-left: 0;
+    }
+    .column1 p {
+        line-height: 1.7;
+    }
+    .column1-content {
+        margin: auto;
+    }
+
+    .column2 {
+        margin: 20px 30px;
     }
 }
