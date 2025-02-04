@@ -9,37 +9,39 @@
     <script src="./static/script.js" defer></script>
 </head>
 <body>
-    <header class="page-header">
-        <h1 class="logo"><a href="#">ロゴ</a></h1>
-        <nav>
-            <ul class="navi">
-                <li><a href="#">トップ</a></li>
-                <li><a href="#">プロフィール</a></li>
-                <li><a href="#">政策</a></li>
-                <li><a href="#">後援会</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-        </nav>
-        <!-- ハンバーガーメニュー -->
-        <button id="hamburger-btn-open"><img class="hamburger-btn" src="static/img/hamburger.png" alt=""></button>
-        <div id="hamburger-menu">
-            <button id="hamburger-btn-close"><img class="hamburger-btn" src="static/img/close.png" alt=""></button>
-            <ul id="hamburger-menu-text">
-                <!-- naviと同一内容を転記 -->
-                <li><a href="#">トップ</a></li>
-                <li><a href="#">プロフィール</a></li>
-                <li><a href="#">政策</a></li>
-                <li><a href="#">後援会</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
-        </div>
+    <header class="header">
+        <div class="page-header">
+            <h1 class="logo"><a href="#">ロゴ</a></h1>
+            <nav>
+                <ul class="navi">
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="#message">メッセージ</a></li>
+                    <li><a href="#three">政策</a></li>
+                    <li><a href="#four">後援会</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <!-- ハンバーガーメニュー -->
+            <button id="hamburger-btn-open"><img class="hamburger-btn" src="static/img/hamburger.png" alt=""></button>
+            <div id="hamburger-menu">
+                <button id="hamburger-btn-close"><img class="hamburger-btn" src="static/img/close.png" alt=""></button>
+                <ul id="hamburger-menu-text">
+                    <!-- naviと同一内容を転記 -->
+                    <li><a href="#">トップ</a></li>
+                    <li><a href="#message">メッセージ</a></li>
+                    <li><a href="#three">政策</a></li>
+                    <li><a href="#four">後援会</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </div><!-- id="hamburger-menu" -->
+        </div><!-- class="page-header" -->
     </header>
 
     <div class="container">
         <img class="top-img" src="static/img/kari.jpg" alt="トップページの画像です">
     </div><!-- class="top-img" -->
 
-    <div class="two-columns">
+    <div class="two-columns" id="message">
         <div class="column1">
             <h2>あなたとともに、未来を創る。</h2>
             <div class="column1-content">
@@ -72,6 +74,24 @@
         <div class="column2">
             <a class="twitter-timeline" data-height="700" href="https://twitter.com/webcreatorbox?ref_src=twsrc%5Etfw">Tweets by webcreatorbox</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div><!-- class="two-columns" -->
+    
+    <div id="three" class="container">
+        <p style="height: 150px; width: 80vw; border: 1px solid #0bd; padding: 20px 30px;">三番目のコンテンツ</p>
+    </div>
+
+    <div id="four" class="container">
+        <p style="height: 150px; width: 80vw; border: 1px solid #0bd; padding: 20px 30px;">四番目のコンテンツ</p>
+    </div>
+
+    <div id="contact">
+        <div class="contact-content">
+            <!-- <h2>お問い合わせ</h2> -->
+            <p>〇〇事務所</p>
+            <p>住所：〒xxx-xxxx　〇〇市〇〇１－２－３</p>
+            <p>TEL：xxx-xxx-xxxx　FAX：xxx-xxx-xxxx</p>
+            <p>email:<a href="sample@example.com">sample@example.com</a></p>
         </div>
     </div>
 

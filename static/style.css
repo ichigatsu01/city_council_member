@@ -3,6 +3,14 @@ body {
     font-size: 18px;
     font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
     color: #000;
+    margin-top: 120px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 120px;
+    background-color: rgba(230, 240, 240, 0.95);
 }
 h2 {
     font-size: 2rem;
@@ -11,7 +19,7 @@ h2 {
 .container {
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 20px auto;
 }
 
 /* ヘッダー */
@@ -86,14 +94,41 @@ h2 {
     margin: 20px 30px;
 }
 
+/* お問い合わせ */
+#contact {
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+    width: 30%;
+    margin: 20px auto;
+    padding: 20px 30px;
+}
+#contact h2 {
+    width: auto;
+    text-align: center;
+    margin: auto;
+}
+#contact p {
+    border-bottom: 1px solid #333;
+    line-height: 2;
+    padding: 10px;
+}
+#contact p:last-child {
+    border-bottom: none;
+}
+
 /* レスポンシブ対応：スマホ */
 @media (max-width: 800px) {
+    body {
+        margin-top: 100px;
+    }
     /* ヘッダー */
     .page-header {
         display: flex;
         justify-content: space-between;
         max-width: 800px;
         width: auto;
+        height: 100px;
         margin: 10px;
         padding: 10px;
         }
@@ -174,5 +209,10 @@ h2 {
 
     .column2 {
         margin: 20px 30px;
+    }
+
+    #contact {
+        width: auto;
+        margin: 30px;
     }
 }
