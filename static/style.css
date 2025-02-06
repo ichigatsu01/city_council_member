@@ -12,10 +12,7 @@ body {
     height: 120px;
     background-color: rgba(230, 240, 240, 0.95);
 }
-h2 {
-    font-size: 2rem;
-    margin: 10px 15px;
-}
+
 .container {
     display: flex;
     justify-content: center;
@@ -33,7 +30,7 @@ h2 {
     align-items: center;
 }
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     flex: 3;
 }
 .navi {
@@ -44,12 +41,12 @@ h2 {
     list-style: none;
     font-size: 1.5rem;
 }
-.navi li a {
+.navi li a , .logo {
     /* リンク貼り付け時の下線や文字色変更を防ぐ */
     text-decoration-line: none;
     color: inherit
 }
-.navi li a:visited {
+.navi li a , .logo :visited {
     /* リンク訪問後の文字色変更を防ぐ */
     text-decoration-line: none;
     color: inherit;
@@ -67,54 +64,82 @@ h2 {
 }
 
 /* メッセージ、sns */
-.two-columns {
-    display: flex;
-    width: 80vw;
-    height: 80vh;
-    margin: 20px auto;
+#message {
+    height: auto;
+    width: 70vw;
     background-color: aliceblue;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
 }
-.column1 {
-    flex: 7;
-    margin: 20px 30px;
+.slogan {
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
-.column1 p {
+.message-contents {
     line-height: 1.7;
 }
-.column1-content {
-    margin-left: 30px;
+.message-contents h3 {
+    border-top: 1px solid rgb(200, 200, 200);
+    padding: 15px 10px;
 }
-.column1-content-name {
+.message-contents h3:last-child {
+    /* 最後の行＝名前のところだけは横線での仕切りを行わない */
+    border-top: none;
+    padding: 15px 10px;
+}
+.message-contents p {
+    padding: 0 20px 10px 20px;
+}
+.message-contents ul {
+    padding: 10px 25px;
+    list-style-position: inside;
+}
+.message-contents ul li {
+    padding: 0 0 0 15px;
+}
+.message-contents ul li ul{
+    padding: 0 0 0 10px;
+}
+.message-contents-name {
     text-align: right;
-    font-size: 30px;
-    margin: 20px;
-}
-.column2 {
-    flex: 3;
-    margin: 20px 30px;
+    font-size: 2rem;
 }
 
 /* お問い合わせ */
-#contact {
+.two-columns {
     display: flex;
+    justify-content: space-around;
+    width: 50vw;
     background-color: aliceblue;
-    justify-content: center;
-    width: 30%;
-    margin: 20px auto;
-    padding: 20px 30px;
 }
-#contact h2 {
-    width: auto;
-    text-align: center;
-    margin: auto;
+.column1 {
+    flex: 5;
+    margin: 20px;
 }
-#contact p {
+.column1 p {
+    margin-left: 10px;
     border-bottom: 1px solid #333;
     line-height: 2;
-    padding: 10px;
 }
-#contact p:last-child {
+.column1 p:last-child {
     border-bottom: none;
+}
+.column2 {
+    flex: 5;
+    max-width: 400px;
+    margin: 20px
+}
+
+/* レスポンシブ対応：狭めのモニタなど */
+@media (max-width: 1000px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    .navi {
+        font-size: 1.2rem;
+        gap: 1rem;
+    }
 }
 
 /* レスポンシブ対応：スマホ */
@@ -138,6 +163,7 @@ h2 {
     .navi {
         display: none;
         }
+        
     /* ハンバーガーメニュー */
     #hamburger-menu {
         display: grid;
@@ -176,6 +202,7 @@ h2 {
     .hamburger-btn {
         height: 50px;
     }
+
     /* トップページ画像 */
     .top-img {
         margin: 30px;
@@ -183,7 +210,8 @@ h2 {
         width: 100vw;
         text-align: center;
     }
-    /* メッセージ、sns */
+
+    /* お問い合わせ */
     .two-columns {
         display: block;
         justify-content: center;
@@ -194,25 +222,20 @@ h2 {
         background-color: aliceblue;
     }
     .column1 {
+        flex: 5;
         margin: 20px;
     }
-    .column1 h2 {
-        text-align: left;
-        margin-left: 0;
-    }
     .column1 p {
-        line-height: 1.7;
+        margin-left: 10px;
+        border-bottom: 1px solid #333;
+        line-height: 2;
     }
-    .column1-content {
-        margin: auto;
+    .column1 p:last-child {
+        border-bottom: none;
     }
-
     .column2 {
-        margin: 20px 30px;
-    }
-
-    #contact {
-        width: auto;
-        margin: 30px;
+        flex: 5;
+        max-width: 400px;
+        margin: 20px
     }
 }
