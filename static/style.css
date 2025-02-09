@@ -1,4 +1,7 @@
 /* 共通 */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-size: 18px;
     font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
@@ -10,7 +13,7 @@ body {
     top: 0;
     width: 100vw;
     height: 120px;
-    background-color: rgba(230, 240, 240, 0.95);
+    background-color: rgba(170, 220, 62, 0.95);
 }
 
 .container {
@@ -41,12 +44,12 @@ body {
     list-style: none;
     font-size: 1.5rem;
 }
-.navi li a , .logo {
+.navi li a , .logo a{
     /* リンク貼り付け時の下線や文字色変更を防ぐ */
     text-decoration-line: none;
     color: inherit
 }
-.navi li a , .logo :visited {
+.navi li a , .logo a:visited {
     /* リンク訪問後の文字色変更を防ぐ */
     text-decoration-line: none;
     color: inherit;
@@ -59,55 +62,68 @@ body {
 /* トップページ画像 */
 .top-img {
     margin: 30px;
-    max-height: 600px;
+    /* max-height: 600px; */
     text-align: center;
 }
 
-/* メッセージ、sns */
-#message {
+/* メッセージ、政策 */
+#message, #policy, #profile {
     height: auto;
     width: 70vw;
-    background-color: aliceblue;
+    background-color: rgba(170, 220, 62, .5);
     border-radius: 10px;
-    margin: auto;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    scroll-margin-top: 130px;/* スクロール時にちょっとだけ上にする */
 }
-.slogan {
+.contents-head {
     font-size: 2rem;
     margin-bottom: 30px;
 }
-.message-contents {
+.contents-body {
     line-height: 1.7;
 }
-.message-contents h3 {
+.contents-body h3 {
     border-top: 1px solid rgb(200, 200, 200);
     padding: 15px 10px;
 }
-.message-contents h3:last-child {
+.contents-body h3:last-child {
     /* 最後の行＝名前のところだけは横線での仕切りを行わない */
     border-top: none;
     padding: 15px 10px;
 }
-.message-contents p {
+.contents-body p, .policy p {
     padding: 0 20px 10px 20px;
 }
-.message-contents ul {
+.contents-body ul {
     padding: 10px 25px;
     list-style-position: inside;
 }
-.message-contents ul li {
+.contents-body ul li {
     padding: 0 0 0 15px;
 }
-.message-contents ul li ul{
+.contents-body ul li ul{
     padding: 0 0 0 10px;
 }
-.message-contents-name {
+.contents-body-name {
     text-align: right;
     font-size: 2rem;
 }
 
 /* お問い合わせ */
-.two-columns {
+#contact {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgba(170, 220, 62, .5);
+    border-radius: 10px;
+}
+#contact p {
+    padding: 10px;
+}
+/* .two-columns {
     display: flex;
     justify-content: space-around;
     width: 50vw;
@@ -129,6 +145,15 @@ body {
     flex: 5;
     max-width: 400px;
     margin: 20px
+} */
+
+/* フッター */
+footer {
+    background-color: rgba(150, 200, 42, 0.95);
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* レスポンシブ対応：狭めのモニタなど */
@@ -212,7 +237,7 @@ body {
     }
 
     /* お問い合わせ */
-    .two-columns {
+    /* .two-columns {
         display: block;
         justify-content: center;
         width: 80vw;
@@ -237,5 +262,8 @@ body {
         flex: 5;
         max-width: 400px;
         margin: 20px
+    } */
+    #contact {
+        width: 70vw;
     }
 }
